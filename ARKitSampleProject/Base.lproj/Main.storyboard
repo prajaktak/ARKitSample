@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARKitSampleProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,175 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU8-m3-jGv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azz-NT-MER" userLabel="LeftControlView">
+                                <rect key="frame" x="0.0" y="539" width="187" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKp-iX-h2V">
+                                        <rect key="frame" x="8" y="49" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Left"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="sa5-3i-ymE" appends="YES" id="4lx-zN-1M7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYE-G4-Jmo">
+                                        <rect key="frame" x="117" y="49" width="36" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Right"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="HOh-UL-QbP" appends="YES" id="9MN-kw-LZO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xae-fr-GoF">
+                                        <rect key="frame" x="78.5" y="8" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Up"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nQT-dq-zpi" appends="YES" id="QGc-TY-fMa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnj-z1-qUb">
+                                        <rect key="frame" x="74" y="90" width="39" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Down"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="zdt-r3-IPX" appends="YES" id="d3x-C7-2an"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IYE-G4-Jmo" firstAttribute="leading" secondItem="GKp-iX-h2V" secondAttribute="trailing" constant="79" id="14K-EV-bOW"/>
+                                    <constraint firstItem="dnj-z1-qUb" firstAttribute="centerX" secondItem="Azz-NT-MER" secondAttribute="centerX" id="2Gj-7F-FRv"/>
+                                    <constraint firstAttribute="width" constant="187" id="QgJ-V1-Hb8"/>
+                                    <constraint firstAttribute="bottom" secondItem="dnj-z1-qUb" secondAttribute="bottom" constant="8" id="SiB-tc-pIv"/>
+                                    <constraint firstItem="IYE-G4-Jmo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GKp-iX-h2V" secondAttribute="trailing" constant="8" symbolic="YES" id="cZu-4g-mrf"/>
+                                    <constraint firstAttribute="height" constant="128" id="dvh-9O-cng"/>
+                                    <constraint firstAttribute="trailing" secondItem="IYE-G4-Jmo" secondAttribute="trailing" constant="34" id="eHm-qc-JBB"/>
+                                    <constraint firstItem="IYE-G4-Jmo" firstAttribute="top" secondItem="Azz-NT-MER" secondAttribute="top" constant="49" id="gSx-df-dOh"/>
+                                    <constraint firstItem="Xae-fr-GoF" firstAttribute="centerX" secondItem="Azz-NT-MER" secondAttribute="centerX" id="kt6-s1-MtW"/>
+                                    <constraint firstItem="Xae-fr-GoF" firstAttribute="top" secondItem="Azz-NT-MER" secondAttribute="top" constant="8" id="sIc-SB-WHg"/>
+                                    <constraint firstItem="GKp-iX-h2V" firstAttribute="top" secondItem="Azz-NT-MER" secondAttribute="top" constant="49" id="tCx-TD-eb8"/>
+                                    <constraint firstItem="GKp-iX-h2V" firstAttribute="leading" secondItem="Azz-NT-MER" secondAttribute="leading" constant="8" id="z4D-qh-dap"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRM-Ds-sbP" userLabel="RightControlView">
+                                <rect key="frame" x="188" y="539" width="187" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-rQ-XHn">
+                                        <rect key="frame" x="8" y="49" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Left"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3Bw-jb-DQp" appends="YES" id="37Q-Ha-Jmh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJj-O9-r2B">
+                                        <rect key="frame" x="78" y="8" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Up"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="TmN-qd-a4V" appends="YES" id="2LZ-qd-Xvv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZe-da-dNa">
+                                        <rect key="frame" x="143" y="49" width="36" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Right"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="odO-rn-H7X" appends="YES" id="L5N-yS-i4S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0y-aZ-JT1">
+                                        <rect key="frame" x="73.5" y="90" width="39" height="30"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Down"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="a2N-oL-3Ji" appends="YES" id="H64-qt-aWW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="t0y-aZ-JT1" secondAttribute="bottom" constant="8" id="6Fc-tF-UjA"/>
+                                    <constraint firstAttribute="width" constant="187" id="Edf-co-7la"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RBx-rQ-XHn" secondAttribute="trailing" constant="20" symbolic="YES" id="GFn-YI-fEt"/>
+                                    <constraint firstAttribute="trailing" secondItem="RZe-da-dNa" secondAttribute="trailing" constant="8" id="I5g-Cx-T3w"/>
+                                    <constraint firstItem="RBx-rQ-XHn" firstAttribute="leading" secondItem="MRM-Ds-sbP" secondAttribute="leading" constant="8" id="I60-Bq-UsF"/>
+                                    <constraint firstItem="t0y-aZ-JT1" firstAttribute="centerX" secondItem="MRM-Ds-sbP" secondAttribute="centerX" id="JIg-o8-NLV"/>
+                                    <constraint firstItem="RZe-da-dNa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MRM-Ds-sbP" secondAttribute="leading" constant="20" symbolic="YES" id="dbZ-ul-WWv"/>
+                                    <constraint firstAttribute="height" constant="128" id="hFh-7h-Rdx"/>
+                                    <constraint firstItem="RBx-rQ-XHn" firstAttribute="top" secondItem="MRM-Ds-sbP" secondAttribute="top" constant="49" id="nEQ-rX-rN4"/>
+                                    <constraint firstItem="RZe-da-dNa" firstAttribute="top" secondItem="MRM-Ds-sbP" secondAttribute="top" constant="49" id="oZa-OS-d5E"/>
+                                    <constraint firstItem="IJj-O9-r2B" firstAttribute="centerX" secondItem="MRM-Ds-sbP" secondAttribute="centerX" id="qEy-mf-aY2"/>
+                                    <constraint firstItem="IJj-O9-r2B" firstAttribute="top" secondItem="MRM-Ds-sbP" secondAttribute="top" constant="8" id="tga-yG-gj3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SU8-m3-jGv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="12T-ba-Knu"/>
+                            <constraint firstItem="SU8-m3-jGv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FKd-oS-rt7"/>
+                            <constraint firstItem="MRM-Ds-sbP" firstAttribute="leading" secondItem="Azz-NT-MER" secondAttribute="trailing" constant="1" id="Xiu-et-eaZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SU8-m3-jGv" secondAttribute="bottom" id="YQH-T8-sEB"/>
+                            <constraint firstItem="Azz-NT-MER" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zap-Kl-qLV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MRM-Ds-sbP" secondAttribute="bottom" id="ZzK-rt-4al"/>
+                            <constraint firstAttribute="trailing" secondItem="SU8-m3-jGv" secondAttribute="trailing" id="eZt-vV-HRL"/>
+                            <constraint firstAttribute="trailing" secondItem="MRM-Ds-sbP" secondAttribute="trailing" id="jgZ-YO-jfa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Azz-NT-MER" secondAttribute="bottom" id="sfd-8n-gUM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arsCNViewObject" destination="SU8-m3-jGv" id="xXE-Oz-IhQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="nQT-dq-zpi" userLabel="LeftControlUpLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="upLongPressed:" destination="BYZ-38-t0r" id="lNR-tO-Ago"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="HOh-UL-QbP" userLabel="LeftControlRightLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="moveRightLongPressed:" destination="BYZ-38-t0r" id="IhN-Jy-AAU"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="zdt-r3-IPX" userLabel="LeftControlDownLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="downLongPressed:" destination="BYZ-38-t0r" id="qHR-rq-x3m"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="sa5-3i-ymE" userLabel="LeftControlLeftLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="moveLeftLongPressed:" destination="BYZ-38-t0r" id="an8-Yc-tOf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="TmN-qd-a4V" userLabel="RightControlUpLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="moveForwardLongPressed:" destination="BYZ-38-t0r" id="88P-K9-mcv"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="odO-rn-H7X" userLabel="RightControlRightLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="rotateRightLongPressed:" destination="BYZ-38-t0r" id="V50-01-zLH"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="a2N-oL-3Ji" userLabel="RightControlDownLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="moveBackLongPressed:" destination="BYZ-38-t0r" id="ZMp-Yx-JWN"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0" id="3Bw-jb-DQp" userLabel="RightControlLeftLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="rotateLeftLongPressed:" destination="BYZ-38-t0r" id="pBR-co-kIZ"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="140" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

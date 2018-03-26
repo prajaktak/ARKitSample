@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9645AEA202EA23A002B938A /* Drone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9645AE9202EA23A002B938A /* Drone.swift */; };
+		F9645AEC202EA340002B938A /* Drone.dae in Resources */ = {isa = PBXBuildFile; fileRef = F9645AEB202EA340002B938A /* Drone.dae */; };
+		F9645AEE202EA353002B938A /* Drone.scn in Resources */ = {isa = PBXBuildFile; fileRef = F9645AED202EA353002B938A /* Drone.scn */; };
 		F9A118D3202E9979003D8ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A118D2202E9979003D8ACC /* AppDelegate.swift */; };
 		F9A118D5202E9979003D8ACC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A118D4202E9979003D8ACC /* ViewController.swift */; };
 		F9A118D8202E9979003D8ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A118D6202E9979003D8ACC /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9645AE9202EA23A002B938A /* Drone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drone.swift; sourceTree = "<group>"; };
+		F9645AEB202EA340002B938A /* Drone.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Drone.dae; sourceTree = "<group>"; };
+		F9645AED202EA353002B938A /* Drone.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Drone.scn; sourceTree = "<group>"; };
 		F9A118CF202E9979003D8ACC /* ARKitSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A118D2202E9979003D8ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9A118D4202E9979003D8ACC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9645AE3202EA079002B938A /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				F9645AEB202EA340002B938A /* Drone.dae */,
+				F9645AED202EA353002B938A /* Drone.scn */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
 		F9A118C6202E9979003D8ACC = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +112,14 @@
 		F9A118D1202E9979003D8ACC /* ARKitSampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				F9645AE3202EA079002B938A /* objects */,
 				F9A118D2202E9979003D8ACC /* AppDelegate.swift */,
 				F9A118D4202E9979003D8ACC /* ViewController.swift */,
 				F9A118D6202E9979003D8ACC /* Main.storyboard */,
 				F9A118D9202E9979003D8ACC /* Assets.xcassets */,
 				F9A118DB202E9979003D8ACC /* LaunchScreen.storyboard */,
 				F9A118DE202E9979003D8ACC /* Info.plist */,
+				F9645AE9202EA23A002B938A /* Drone.swift */,
 			);
 			path = ARKitSampleProject;
 			sourceTree = "<group>";
@@ -193,7 +210,7 @@
 				TargetAttributes = {
 					F9A118CE202E9979003D8ACC = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6AC44Z6PNA;
+						DevelopmentTeam = MYQELUCUG5;
 						ProvisioningStyle = Automatic;
 					};
 					F9A118E2202E9979003D8ACC = {
@@ -237,6 +254,8 @@
 			files = (
 				F9A118DD202E9979003D8ACC /* LaunchScreen.storyboard in Resources */,
 				F9A118DA202E9979003D8ACC /* Assets.xcassets in Resources */,
+				F9645AEC202EA340002B938A /* Drone.dae in Resources */,
+				F9645AEE202EA353002B938A /* Drone.scn in Resources */,
 				F9A118D8202E9979003D8ACC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9645AEA202EA23A002B938A /* Drone.swift in Sources */,
 				F9A118D5202E9979003D8ACC /* ViewController.swift in Sources */,
 				F9A118D3202E9979003D8ACC /* AppDelegate.swift in Sources */,
 			);
@@ -413,8 +433,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6AC44Z6PNA;
+				DEVELOPMENT_TEAM = MYQELUCUG5;
 				INFOPLIST_FILE = ARKitSampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PK.ARKitSampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,8 +447,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6AC44Z6PNA;
+				DEVELOPMENT_TEAM = MYQELUCUG5;
 				INFOPLIST_FILE = ARKitSampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PK.ARKitSampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,6 +534,7 @@
 				F9A118F9202E9979003D8ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9A118FA202E9979003D8ACC /* Build configuration list for PBXNativeTarget "ARKitSampleProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +543,7 @@
 				F9A118FC202E9979003D8ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9A118FD202E9979003D8ACC /* Build configuration list for PBXNativeTarget "ARKitSampleProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +552,7 @@
 				F9A118FF202E9979003D8ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
